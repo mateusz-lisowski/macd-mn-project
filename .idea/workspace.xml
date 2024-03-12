@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
+    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Implement macd index as class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +85,65 @@
       <option name="project" value="LOCAL" />
       <updated>1710246075200</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add historical dollar price csv file">
+      <option name="closed" value="true" />
+      <created>1710246338305</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710246338305</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add data headers">
+      <option name="closed" value="true" />
+      <created>1710268546980</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710268546980</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implement MACD index calculation">
+      <option name="closed" value="true" />
+      <created>1710268588120</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710268588120</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement logic for calculating buying and selling points">
+      <option name="closed" value="true" />
+      <created>1710280122957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710280122957</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Plot buying and selling points on the chart">
+      <option name="closed" value="true" />
+      <created>1710280801521</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710280801521</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implement macd index as class">
+      <option name="closed" value="true" />
+      <created>1710285708956</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710285708956</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Add historical dollar price csv file" />
+    <MESSAGE value="Add data headers" />
+    <MESSAGE value="Implement MACD index calculation" />
+    <MESSAGE value="Implement logic for calculating buying and selling points" />
+    <MESSAGE value="Plot buying and selling points on the chart" />
+    <MESSAGE value="Implement macd index as class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement macd index as class" />
   </component>
 </project>
