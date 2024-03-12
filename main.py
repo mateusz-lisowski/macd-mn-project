@@ -16,6 +16,22 @@ def plot_macd_and_signal(df: pd.DataFrame) -> None:
     plt.show()
 
 
+def calculate_buying_points(df: pd.DataFrame) -> list:
+    buying_points = []
+    for i in range(len(df)):
+        if df['macd'].iloc[i] > df['signal'].iloc[i] and df['macd'].iloc[i - 1] < df['signal'].iloc[i - 1]:
+            buying_points.append(i)
+    return buying_points
+
+
+def calculate_selling_points(df: pd.DataFrame) -> list:
+    selling_points = []
+    for i in range(len(df)):
+        if df['macd'].iloc[i] < df['signal'].iloc[i] and df['macd'].iloc[i - 1] > df['signal'].iloc[i - 1]:
+            selling_points.append(i)
+    return selling_points
+
+
 def main():
     data = pd.read_csv('data.csv')
     calculate_macd_index(data)
