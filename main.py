@@ -58,9 +58,7 @@ class MacdIndex:
             marker='v',
             color='red'
         )
-        # plt.xticks(self.data.index[::30], rotation=45)
-        plt.xticks(rotation=45)
-        plt.autoscale()
+        plt.xticks(self.data.index[::60], rotation=45)
         plt.tight_layout()
         plt.legend()
         plt.show()
