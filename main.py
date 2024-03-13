@@ -85,8 +85,28 @@ class MacdIndex:
         return sum(profits) / len(profits)
 
 
+def get_df_from_csv_file(filepath: str) -> pd.DataFrame | None:
+    try:
+        return pd.read_csv(filepath)
+    except FileNotFoundError:
+        return None
+
+
 def main():
-    data = pd.read_csv('data.csv')
+
+    usd = get_df_from_csv_file('data/usd.csv')
+    if usd is None:
+        print("There is no valid csv file under given path")
+
+    eur = get_df_from_csv_file('data/eur.csv')
+    if eur is None:
+        print("There is no valid csv file under given path")
+
+    chf = get_df_from_csv_file('data/chf.csv')
+    if chf is None:
+        print("There is no valid csv file under given path")
+
+    data = pd.read_csv('usd.csv')
     macd = MacdIndex(data)
     macd.plot_macd()
     print(f"Average profit for 1000 trading days is: {round(macd.backtest(), 2)}")

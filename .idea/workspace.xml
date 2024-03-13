@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Implement macd index as class">
+    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Moved all csv files to dedicated directory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -19,9 +19,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2daV0xMnEEXDRT2vjjZHlia6GyS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,9 +34,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/sindbad_the_sailor/PycharmProjects/longscope-data-tool"
+    "last_opened_file_path": "C:/Users/sindbad_the_sailor/PycharmProjects/mn-project-1"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sindbad_the_sailor\PycharmProjects\mn-project-1\data" />
+      <recent name="C:\Users\sindbad_the_sailor\PycharmProjects\mn-project-1" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="mn-project-1" />
@@ -133,7 +139,55 @@
       <option name="project" value="LOCAL" />
       <updated>1710285708956</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Change density of date plotting on x axis">
+      <option name="closed" value="true" />
+      <created>1710287243668</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710287243668</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Finished first task of the project">
+      <option name="closed" value="true" />
+      <created>1710287277374</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710287277374</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add trading strategy backtesting">
+      <option name="closed" value="true" />
+      <created>1710334873081</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710334873081</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add historical data for CHF">
+      <option name="closed" value="true" />
+      <created>1710335385185</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710335385185</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add historical data for EUR">
+      <option name="closed" value="true" />
+      <created>1710335392133</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710335392133</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Moved all csv files to dedicated directory">
+      <option name="closed" value="true" />
+      <created>1710335421135</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710335421135</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +198,12 @@
     <MESSAGE value="Implement logic for calculating buying and selling points" />
     <MESSAGE value="Plot buying and selling points on the chart" />
     <MESSAGE value="Implement macd index as class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement macd index as class" />
+    <MESSAGE value="Change density of date plotting on x axis" />
+    <MESSAGE value="Finished first task of the project" />
+    <MESSAGE value="Add trading strategy backtesting" />
+    <MESSAGE value="Add historical data for CHF" />
+    <MESSAGE value="Add historical data for EUR" />
+    <MESSAGE value="Moved all csv files to dedicated directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved all csv files to dedicated directory" />
   </component>
 </project>
