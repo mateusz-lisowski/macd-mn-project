@@ -99,11 +99,11 @@ class MacdIndex:
             sell_prices.drop(sell_prices.index[0], inplace=True)
 
         if buy_prices.index[-1] > sell_prices.index[-1]:
-            buy_prices.drop(buy_prices.index[-1])
+            buy_prices.drop(buy_prices.index[-1], inplace=True)
 
         profits: list[float] = []
         for buy_price, sell_price in zip(buy_prices, sell_prices):
-            profit = sell_price - buy_price / buy_price
+            profit = (sell_price - buy_price) / buy_price
             profits.append(profit)
 
         return sum(profits) / len(profits)
@@ -143,9 +143,9 @@ def main():
     chf_macd.plot_macd('MACD and SIGNAL value for CHF')
     chf_macd.plot_assets_with_buy_sell_points('CHF price in PLN with buying and selling points')
 
-    print(f"Average profit for 1000 trading days for USD is: {round(usd_macd.backtest(), 2)}")
-    print(f"Average profit for 1000 trading days for EUR is: {round(eur_macd.backtest(), 2)}")
-    print(f"Average profit for 1000 trading days for CHF is: {round(chf_macd.backtest(), 2)}")
+    print(f"Average profit for 1000 trading days for USD is: {usd_macd.backtest():.8f}")
+    print(f"Average profit for 1000 trading days for EUR is: {eur_macd.backtest():.8f}")
+    print(f"Average profit for 1000 trading days for CHF is: {chf_macd.backtest():.8f}")
 
 
 if __name__ == '__main__':

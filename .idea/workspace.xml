@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Implement wrapper function for obtaining data from csv files">
+    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Split macd/signal and asset/buying/selling points to two different charts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/chf.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/chf.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/eur.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/eur.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +195,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710348352406</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fix missing header error">
+      <option name="closed" value="true" />
+      <created>1710348655107</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1710348655107</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add analysis for EUR and CHF charts">
+      <option name="closed" value="true" />
+      <created>1710348680434</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1710348680434</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Split macd/signal and asset/buying/selling points to two different charts">
+      <option name="closed" value="true" />
+      <created>1710353094872</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1710353094872</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,6 +237,9 @@
     <MESSAGE value="Add historical data for EUR" />
     <MESSAGE value="Moved all csv files to dedicated directory" />
     <MESSAGE value="Implement wrapper function for obtaining data from csv files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement wrapper function for obtaining data from csv files" />
+    <MESSAGE value="Fix missing header error" />
+    <MESSAGE value="Add analysis for EUR and CHF charts" />
+    <MESSAGE value="Split macd/signal and asset/buying/selling points to two different charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Split macd/signal and asset/buying/selling points to two different charts" />
   </component>
 </project>
