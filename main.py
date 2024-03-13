@@ -42,24 +42,48 @@ class MacdIndex:
                 selling_points.append(i)
         return selling_points
 
-    def plot_macd(self) -> None:
+    def plot_macd(self, title: str) -> None:
+
         plt.plot(self.data['signal'], label='signal', color='red')
         plt.plot(self.data['macd'], label='macd', color='green')
+
+        plt.xticks(self.data.index[::60], rotation=45)
+        plt.tight_layout()
+
+        plt.xlabel('date')
+        plt.ylabel('macd/signal value')
+        plt.title(title)
+
+        plt.legend()
+        plt.show()
+
+    def plot_assets_with_buy_sell_points(self, title: str):
+
         plt.plot(self.data['value'], label='price', color='black')
+
         plt.scatter(
             self.data.iloc[self.buying_points].index,
             self.data.iloc[self.buying_points]['value'],
+            label='buying points',
             marker='^',
             color='green'
         )
+
         plt.scatter(
             self.data.iloc[self.selling_points].index,
             self.data.iloc[self.selling_points]['value'],
+            label='selling points',
             marker='v',
             color='red'
         )
+
         plt.xticks(self.data.index[::60], rotation=45)
         plt.tight_layout()
+
+        plt.xlabel('date')
+        plt.ylabel('asset price [PLN]')
+        plt.title(title)
+
         plt.legend()
         plt.show()
 
@@ -110,9 +134,14 @@ def main():
     eur_macd = MacdIndex(eur)
     chf_macd = MacdIndex(chf)
 
-    usd_macd.plot_macd()
-    eur_macd.plot_macd()
-    chf_macd.plot_macd()
+    usd_macd.plot_macd('MACD and SIGNAL value for USD')
+    usd_macd.plot_assets_with_buy_sell_points('USD price in PLN with buying and selling points')
+
+    eur_macd.plot_macd('MACD and SIGNAL value for EUR')
+    eur_macd.plot_assets_with_buy_sell_points('EUR price in PLN with buying and selling points')
+
+    chf_macd.plot_macd('MACD and SIGNAL value for CHF')
+    chf_macd.plot_assets_with_buy_sell_points('CHF price in PLN with buying and selling points')
 
     print(f"Average profit for 1000 trading days for USD is: {round(usd_macd.backtest(), 2)}")
     print(f"Average profit for 1000 trading days for EUR is: {round(eur_macd.backtest(), 2)}")
