@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Moved all csv files to dedicated directory">
+    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Implement wrapper function for obtaining data from csv files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/chf.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/chf.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eur.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/eur.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710335421135</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implement wrapper function for obtaining data from csv files">
+      <option name="closed" value="true" />
+      <created>1710348352406</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1710348352406</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -204,6 +214,7 @@
     <MESSAGE value="Add historical data for CHF" />
     <MESSAGE value="Add historical data for EUR" />
     <MESSAGE value="Moved all csv files to dedicated directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved all csv files to dedicated directory" />
+    <MESSAGE value="Implement wrapper function for obtaining data from csv files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement wrapper function for obtaining data from csv files" />
   </component>
 </project>

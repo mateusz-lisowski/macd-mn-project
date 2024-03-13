@@ -106,10 +106,17 @@ def main():
     if chf is None:
         print("There is no valid csv file under given path")
 
-    data = pd.read_csv('usd.csv')
-    macd = MacdIndex(data)
-    macd.plot_macd()
-    print(f"Average profit for 1000 trading days is: {round(macd.backtest(), 2)}")
+    usd_macd = MacdIndex(usd)
+    eur_macd = MacdIndex(eur)
+    chf_macd = MacdIndex(chf)
+
+    usd_macd.plot_macd()
+    eur_macd.plot_macd()
+    chf_macd.plot_macd()
+
+    print(f"Average profit for 1000 trading days for USD is: {round(usd_macd.backtest(), 2)}")
+    print(f"Average profit for 1000 trading days for EUR is: {round(eur_macd.backtest(), 2)}")
+    print(f"Average profit for 1000 trading days for CHF is: {round(chf_macd.backtest(), 2)}")
 
 
 if __name__ == '__main__':
