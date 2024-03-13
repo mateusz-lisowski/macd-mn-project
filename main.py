@@ -63,11 +63,33 @@ class MacdIndex:
         plt.legend()
         plt.show()
 
+    def backtest(self) -> float:
+
+        buy_days = [day + 1 for day in self.buying_points]
+        sell_days = [day + 1 for day in self.selling_points]
+
+        buy_prices: pd.DataFrame = self.data['value'].iloc[buy_days]
+        sell_prices: pd.DataFrame = self.data['value'].iloc[sell_days]
+
+        if sell_prices.index[0] < buy_prices.index[0]:
+            sell_prices.drop(sell_prices.index[0], inplace=True)
+
+        if buy_prices.index[-1] > sell_prices.index[-1]:
+            buy_prices.drop(buy_prices.index[-1])
+
+        profits: list[float] = []
+        for buy_price, sell_price in zip(buy_prices, sell_prices):
+            profit = sell_price - buy_price / buy_price
+            profits.append(profit)
+
+        return sum(profits) / len(profits)
+
 
 def main():
     data = pd.read_csv('data.csv')
     macd = MacdIndex(data)
     macd.plot_macd()
+    print(f"Average profit for 1000 trading days is: {round(macd.backtest(), 2)}")
 
 
 if __name__ == '__main__':
