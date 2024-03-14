@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Split macd/signal and asset/buying/selling points to two different charts">
+    <list default="true" id="1574b73f-cc53-4705-8a79-7c4e651cfb1a" name="Changes" comment="Fix bugs in calculating profits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -28,15 +28,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/sindbad_the_sailor/PycharmProjects/mn-project-1"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sindbad_the_sailor/PycharmProjects/mn-project-1&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sindbad_the_sailor\PycharmProjects\mn-project-1\data" />
@@ -219,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710353094872</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fix bugs in calculating profits">
+      <option name="closed" value="true" />
+      <created>1710356234159</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1710356234159</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -240,6 +248,7 @@
     <MESSAGE value="Fix missing header error" />
     <MESSAGE value="Add analysis for EUR and CHF charts" />
     <MESSAGE value="Split macd/signal and asset/buying/selling points to two different charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split macd/signal and asset/buying/selling points to two different charts" />
+    <MESSAGE value="Fix bugs in calculating profits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bugs in calculating profits" />
   </component>
 </project>

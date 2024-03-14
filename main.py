@@ -87,7 +87,7 @@ class MacdIndex:
         plt.legend()
         plt.show()
 
-    def backtest(self) -> float:
+    def backtest(self, start_assets: float = None) -> tuple[float, float]:
 
         buy_days = [day + 1 for day in self.buying_points]
         sell_days = [day + 1 for day in self.selling_points]
@@ -106,7 +106,14 @@ class MacdIndex:
             profit = (sell_price - buy_price) / buy_price
             profits.append(profit)
 
-        return sum(profits) / len(profits)
+        total = start_assets
+        if start_assets:
+            for buy_price, sell_price in zip(buy_prices, sell_prices):
+                assets = total / buy_price
+                revenue = assets * sell_price
+                total = revenue
+
+        return sum(profits) / len(profits), total
 
 
 def get_df_from_csv_file(filepath: str) -> pd.DataFrame | None:
@@ -143,9 +150,19 @@ def main():
     chf_macd.plot_macd('MACD and SIGNAL value for CHF')
     chf_macd.plot_assets_with_buy_sell_points('CHF price in PLN with buying and selling points')
 
-    print(f"Average profit for 1000 trading days for USD is: {usd_macd.backtest():.8f}")
-    print(f"Average profit for 1000 trading days for EUR is: {eur_macd.backtest():.8f}")
-    print(f"Average profit for 1000 trading days for CHF is: {chf_macd.backtest():.8f}")
+    START_CAPITAL = 1000
+
+    usd_result = usd_macd.backtest(START_CAPITAL)
+    print(f"Average profit for 1000 trading days for USD is: {usd_result[0]:.8f}")
+    print(f"If you started with {START_CAPITAL} USD on the begging, you would have {usd_result[1]:.2f} USD at the end")
+
+    eur_result = eur_macd.backtest(START_CAPITAL)
+    print(f"Average profit for 1000 trading days for EUR is: {eur_result[0]:.8f}")
+    print(f"If you started with {START_CAPITAL} EUR on the begging, you would have {eur_result[1]:.2f} EUR at the end")
+
+    chf_result = chf_macd.backtest(START_CAPITAL)
+    print(f"Average profit for 1000 trading days for CHF is: {chf_result[0]:.8f}")
+    print(f"If you started with {START_CAPITAL} CHF on the begging, you would have {chf_result[1]:.2f} CHF at the end")
 
 
 if __name__ == '__main__':
